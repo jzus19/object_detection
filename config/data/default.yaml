@@ -1,0 +1,18 @@
+
+train:
+  cls: src.data.COCODataset
+  args:
+    metafile: /home/user/work/my_projects/obj_detection/data/annotations_trainval2017/instances_train2017.json
+    img_dir: /home/user/work/my_projects/obj_detection//data/train2017
+    classes: "car"
+    debug: True
+    mode: train
+
+val:
+  cls: src.data.COCODataset
+  args:
+    metafile: /home/user/work/my_projects/obj_detection//data/annotations_trainval2017/instances_val2017.json
+    img_dir: /home/user/work/my_projects/obj_detection//data/val2017
+    classes: "car"
+    debug: True
+    mode: val

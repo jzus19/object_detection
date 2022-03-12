@@ -1,0 +1,12 @@
+hydra==2.5
+fiftyone==0.14.4
+pycocotools==2.0.4 
+torch==1.11.0
+hydra-core==1.1.1 
+pydot==1.4.2
+tensorboard==2.8.0 
+logger==1.4 
+pytorch-lightning==1.5.10
+timm==0.5.4
+mmcv-full==1.4.6
+effdet==0.3.0

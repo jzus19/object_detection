@@ -1,0 +1,30 @@
+batch_size: 2
+debug: True
+ckpt_path: None
+
+train_params:
+  gpus: 1
+  precision: 16
+  accelerator: "cpu"
+  accumulate_grad_batches: 1
+  auto_scale_batch_size: None
+  auto_lr_find: False
+  check_val_every_n_epoch: 10
+  
+callbacks:
+  lr_logging: pytorch_lightning.callbacks.LearningRateMonitor
+  ckpt:
+    cls: pytorch_lightning.callbacks.ModelCheckpoint
+    args:
+      dirpath: ${ckpt_directory}
+      every_n_epochs: 1
+      save_last: True
+      
+logger:
+  cls: pytorch_lightning.loggers.TensorBoardLogger
+  args:
+    save_dir: tb
+    name: ${name}
+    
+    
+    

@@ -1,0 +1,4 @@
+model_params:
+  pretrained: False
+  ckpt: ../input/efficientdet/efficientdet_d5-ef44aea8.pth
+  num_classes: 1
