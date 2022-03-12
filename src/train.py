@@ -46,10 +46,7 @@ def train(cfg: DictConfig) -> None:
         val_cls=cfg.data.val,
         batch_size=cfg.train.batch_size,
     )
-    for batch in train_dataloader:
-        print(batch)
 
-    sys.exit()
     trainer.fit(train_dataloaders=train_dataloader, val_dataloaders=val_dataloader, model=model)
 
     
